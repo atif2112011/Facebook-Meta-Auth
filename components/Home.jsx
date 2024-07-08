@@ -11,7 +11,7 @@ function Home() {
 
     useEffect(()=>{
       checkLoginState();
-    },[])
+    },[userData])
     
     async function checkLoginState() {               // Called when a person is finished with the Login Button.
         await FB.getLoginStatus(async function(response) {   // See the onlogin handler
@@ -61,7 +61,7 @@ function Home() {
   const handleFacebookLogout=()=>{
     FB.logout(function(response) {
       setLogged(false)
-      window.reload();
+     
       console.log(`Logged Out`)
    });
   }    
