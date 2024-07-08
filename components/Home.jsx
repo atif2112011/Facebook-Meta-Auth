@@ -27,7 +27,7 @@ function Home() {
            try {
              await fetchUserData(); // Fetch user data after setting logged state
           await setLogged(true);
-      
+          window.reload();
           console.log('User:', userData);
         } catch (error) {
           console.error('Error fetching user data:', error);
