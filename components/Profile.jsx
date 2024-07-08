@@ -8,7 +8,7 @@ function Profile({user,logout}) {
         <div class="login-container flex-col">
             <h1>Facebook Profile</h1>
 
-           {user && <><img src={user.picture.data.url|| ''} height='60' width='60' ></img>
+           {user?<><img src={user.picture.data.url|| ''} height='60' width='60' ></img>
            <div class='pf_text'>
                 Name: <span>{user.name|| ''}</span>
             </div>
@@ -18,7 +18,9 @@ function Profile({user,logout}) {
             <button class="login-signin-btn fb-btn" onClick={logout}>
                 <img src={fblogo2} class="img-fb" height='40' width='40' alt="google sign in"/><span>Logout</span>
 
-                </button> </>} 
+                </button> </>:<>
+                <p>Don,t see your account details !!..</p>
+                <button class="btn-primary-small-text" onClick={()=>location.reload()}>Click Here</button></>} 
         </div>
         <div><Page user={user}/></div>
     </div>

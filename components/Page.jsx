@@ -49,35 +49,35 @@ function Page({user}) {
 
 
    
-    useEffect(()=>{
-        const pages=[{
-            id:'1234',
-            name:'Page Name1',
-            category:'PAge Category1',
-            access_token:"page_access_token",
+    // useEffect(()=>{
+    //     const pages=[{
+    //         id:'1234',
+    //         name:'Page Name1',
+    //         category:'PAge Category1',
+    //         access_token:"page_access_token",
 
-            total_followers:[1,2,3],
-        total_engagement:[1,2,3],
-        total_impressions:[1,2,3],
-        total_reactions:[1,2,3],
+    //         total_followers:[1,2,3],
+    //     total_engagement:[1,2,3],
+    //     total_impressions:[1,2,3],
+    //     total_reactions:[1,2,3],
 
-        },
-        {
-            id:'5678',
-            name:'Page Name2',
-            category:'PAge Category2',
-            access_token:"page_access_token",
+    //     },
+    //     {
+    //         id:'5678',
+    //         name:'Page Name2',
+    //         category:'PAge Category2',
+    //         access_token:"page_access_token",
 
-            total_followers:[4,5,6],
-        total_engagement:[4,5,6],
-        total_impressions:[4,5,6],
-        total_reactions:[4,5,6],
+    //         total_followers:[4,5,6],
+    //     total_engagement:[4,5,6],
+    //     total_impressions:[4,5,6],
+    //     total_reactions:[4,5,6],
 
-        }]
-        setPages(pages)
-        fetchData()
+    //     }]
+    //     setPages(pages)
+    //     fetchData()
     
-    },[])
+    // },[])
 
     const handleSelection=async(event)=>{
         const id=event.target.value

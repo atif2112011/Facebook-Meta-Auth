@@ -11,7 +11,7 @@ function Home() {
 
     useEffect(()=>{
       checkLoginState();
-    },[userData])
+    },[])
     
     async function checkLoginState() {               // Called when a person is finished with the Login Button.
         await FB.getLoginStatus(async function(response) {   // See the onlogin handler
@@ -27,7 +27,7 @@ function Home() {
            try {
              await fetchUserData(); // Fetch user data after setting logged state
           await setLogged(true);
-          window.reload();
+
           console.log('User:', userData);
         } catch (error) {
           console.error('Error fetching user data:', error);
